@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: lightsalmon;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+
+header nav ul li {
+    margin: 0 60px;
+
+}
+
+header nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: white;
+}
+
+#slider {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    background-color: #ddd;
+}
+
+.slides {
+    display: flex;
+    animation: slideAnimation 15s infinite;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+@keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-100%); }
+    66% { transform: translateX(-200%); }
+    100% { transform: translateX(0); }
+}
+
+#about {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#about h2 {
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+#experience {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#experience h2 {
+    margin-bottom: 20px;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.experience-card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.work-experience {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.work-experience h2 {
+    margin-bottom: 20px;
+}
+
+.work-card {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.work-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.work-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.work-link:hover {
+    color: #e5533d;
+}
+
+footer {
+    padding: 50px 20px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+footer form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+footer form label {
+    margin: 10px 0 5px;
+}
+
+footer form input, footer form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer form button {
+    padding: 10px;
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+footer form button:hover {
+    background-color: #e5533d;
+}
+#experience {
+    padding: 20px;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+}
+
+.experience-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust as needed */
+}
+
+.experience-card {
+    flex: 1 1 calc(33.333% - 10px); /* Adjust width to fit 3 cards in a row */
+    box-sizing: border-box;
+    background-color: goldenrod; /* Example background color */
+    padding: 20px;
+    border: 1px solid #ddd; /* Example border */
+    border-radius: 5px; /* Example border radius */
+    margin: 5px 0; /* Adjust spacing between rows */
+}
+
+.experience-card h3 {
+    margin-top: 0;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .about-content, .experience-content {
+        flex-direction: column;
+    }
+
+    .about-image,
+}

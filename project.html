@@ -1,0 +1,243 @@
+<html>
+
+<head>
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        line-height: 1.6;
+        background-color: #f4f4f4;
+    }
+
+    header {
+        background-color: lightsalmon;
+        padding: 1px 0;
+        text-align: center;
+    }
+
+    header nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        font-size: 35px;
+    }
+
+    header nav ul li {
+        margin: 0 60px;
+
+    }
+
+    header nav ul li a {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+
+    header nav ul li a:hover {
+        color: white;
+    }
+
+    #slider {
+        position: relative;
+        overflow: hidden;
+        height: 400px;
+        background-color: #ddd;
+    }
+
+    .slides {
+        display: flex;
+        animation: slideAnimation 15s infinite;
+    }
+
+    .slide {
+        min-width: 100%;
+        position: relative;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 24px;
+    }
+
+    @keyframes slideAnimation {
+        0% {
+            transform: translateX(0);
+        }
+
+        33% {
+            transform: translateX(-100%);
+        }
+
+        66% {
+            transform: translateX(-200%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    #about {
+        padding: 50px 20px;
+        background-color: #fff;
+        text-align: center;
+    }
+
+    .about h2 {
+        margin-bottom: 20px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        color: green;
+    }
+
+    .about-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .about-image img {
+        width: 500px;
+        height: auto;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .about-image img:hover {
+        transform: scale(1.05);
+    }
+
+    .about-text {
+        max-width: 600px;
+    }
+
+    footer {
+        background-color: red;
+        padding: 10px;
+        color: white;
+        width: 100%;
+        text-align: center;
+        margin-top: 200px;
+    }
+
+    footer form {
+        max-width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer form label {
+        margin: 10px 0 5px;
+        margin-left: -900px;
+    }
+
+    footer form input,
+    footer form textarea {
+
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        width: 500px;
+        border-radius: 5px;
+
+    }
+
+    footer form button {
+        padding: 10px;
+        background-color: red;
+        color: white;
+        border: none;
+        width: 400px;
+        border-radius: 5px;
+        cursor: pointer;
+        transform: background-color 0.3s ease;
+    }
+
+    footer form button:hover {
+        background-color: orangered;
+
+    }
+</style>
+<tittle>
+</tittle>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#experience">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="slider">
+        <div class="slides">
+            <div class="slide">
+                <img src="slide1.jpg" alt="Slide 1">
+                <div class="caption">Welcome to My Portfolio</div>
+            </div>
+            <div class="slide">
+                <img src="slide1.jpg" alt="Slide 2">
+                <div class="caption">Explore My Work</div>
+            </div>
+            <div class="slide">
+                <img src="slide1.jpg" alt="Slide 3">
+                <div class="caption">Get in Touch</div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="about">
+            <h2>About</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="about.jpg" alt="about image">
+                </div>
+                <div clas="about-text">
+                    <p>dhsjkdwdh</p>
+                </div>
+            </div>
+    </section>
+
+    <footer>
+        <h2>Get In Touch</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="name">Email:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="number">Number</label>
+            <input type="number" id="number" required>
+            <button>Submit</button>
+        </form>
+    </footer>
+</body>
+
+</html>
